@@ -1,5 +1,6 @@
 import 'package:app5/core/extensin.dart';
 import 'package:app5/core/validator.dart';
+import 'package:app5/features/auth/view/screen/register.dart';
 import 'package:app5/features/auth/view/widget/text_field.dart';
 import 'package:app5/features/home/home.dart';
 import 'package:flutter/material.dart';
@@ -35,7 +36,7 @@ class SignInScreen extends StatelessWidget {
               ),
 
               SizedBox(height: 60),
-              Container(
+              SizedBox(
                 width: 200,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
@@ -46,6 +47,19 @@ class SignInScreen extends StatelessWidget {
                   },
                   child: const Text('Sign In', style: TextStyle(fontSize: 20)),
                 ),
+              ),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text("Don't have an account?"),
+                  TextButton(
+                    onPressed: () {
+                      context.pushNav(Register());
+                    },
+                    child: const Text('Sign Up'),
+                  ),
+                ],
               ),
             ],
           ),

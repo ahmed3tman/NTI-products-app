@@ -1,4 +1,3 @@
-import 'package:app5/features/auth/view/screen/register.dart';
 import 'package:app5/features/auth/view/screen/signin.dart';
 import 'package:flutter/material.dart';
 
@@ -11,6 +10,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false, home: Register());
+    return MaterialApp(debugShowCheckedModeBanner: false, home: SignInScreen());
   }
 }

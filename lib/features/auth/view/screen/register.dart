@@ -16,7 +16,7 @@ class Register extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(height: 100),
-              Text("Register", style: TextStyle(fontSize: 30)),
+              Text("Sign Up", style: TextStyle(fontSize: 30)),
 
               SizedBox(height: 60),
               MyTextField(
@@ -64,7 +64,7 @@ class Register extends StatelessWidget {
               ),
 
               SizedBox(height: 60),
-              Container(
+              SizedBox(
                 width: 200,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
@@ -73,8 +73,21 @@ class Register extends StatelessWidget {
                   onPressed: () {
                     context.pushNav(SignInScreen());
                   },
-                  child: const Text('Register', style: TextStyle(fontSize: 20)),
+                  child: const Text('sign up', style: TextStyle(fontSize: 20)),
                 ),
+              ),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text("Don't have an account?"),
+                  TextButton(
+                    onPressed: () {
+                      context.pushNav(SignInScreen());
+                    },
+                    child: const Text('Sign In'),
+                  ),
+                ],
               ),
             ],
           ),
